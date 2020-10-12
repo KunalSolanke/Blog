@@ -1,0 +1,192 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    display: block;
+    z-index: 1;
+    color: #fff;
+    font-weight: 200;
+    background-size: cover;
+    background-position: center center;
+
+    .sidebar-wrapper{
+        position: relative;
+        height: calc(100vh - 75px);
+        overflow: auto;
+        width: 260px;
+        z-index: 4;
+        padding-bottom: 30px;
+    }
+
+    
+
+    .logo{
+        padding: 10px 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        z-index: 4;
+    }
+
+    
+    .nav{
+        margin-top: 20px;
+
+        li{
+            display:flex ;
+            align-items: center;
+            padding : 10px 10px ;
+            margin-top:5px ;
+            > a{
+                flex-grow : 1 ;
+                color: #FFFFFF;
+                margin: 5px 15px;
+                opacity: .86;
+                border-radius: 4px;
+                text-transform: uppercase;
+                font-weight : 400 ;
+                padding : 5px 10px ;
+            }
+
+            &:hover > a,
+            &.open > a,
+            &.open > a:focus,
+            &.open > a:hover{
+                background: rgba(255,255,255,0.13);
+                opacity: 1;
+            }
+
+            &.active > a{
+                color: #FFFFFF;
+                opacity: 1;
+                background: rgba(255,255,255,0.23);
+
+            }
+        }
+
+       
+
+        .caret{
+            top: 24px;
+            position: absolute;
+            right: 15px;
+        }
+
+        .simple-text{
+            text-transform: uppercase;
+            padding: $padding-small-vertical $padding-zero;
+            display: block;
+            font-size: $font-size-large;
+            color: $white-color;
+            font-weight: $font-weight-normal;
+            line-height: 30px;
+        }
+
+        i{
+            font-size: 28px;
+            float: left;
+            margin-right: 15px;
+            line-height: 30px;
+            width: 30px;
+            text-align: center;
+        }
+    }
+}
+
+
+
+body > .navbar-collapse{
+    .logo{
+        padding: 10px 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+        p{
+            float: left;
+            font-size: 20px;
+            margin: 10px 10px;
+            color: $white-color;
+            line-height: 20px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .simple-text{
+            text-transform: uppercase;
+            padding: $padding-small-vertical $padding-zero;
+            display: block;
+            font-size: $font-size-large;
+            color: $white-color;
+            font-weight: $font-weight-normal;
+            line-height: 30px;
+        }
+    }
+
+    
+
+    &:after,
+    &:before{
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &:before{
+        opacity: .33;
+        background: greenyellow;
+    }
+
+    &:after{
+       @include icon-gradient($black-color-top, $black-color-bottom);
+       z-index: 3;
+       opacity: 1;
+    }
+
+    
+}
+
+
+.main-panel{
+    background: rgba(203,203,210,.15);
+    position: relative;
+    float: right;
+    width: $sidebar-width;
+
+    > .content{
+        padding: 30px 15px;
+        min-height: calc(100% - 123px);
+    }
+
+    > .footer{
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .navbar{
+        margin-bottom: 0;
+    }
+}
+
+.sidebar,
+.main-panel{
+    -webkit-transition-property: top,bottom;
+    transition-property: top,bottom;
+    -webkit-transition-duration: .2s,.2s;
+    transition-duration: .2s,.2s;
+    -webkit-transition-timing-function: linear,linear;
+    transition-timing-function: linear,linear;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+.dash_navbar{
+    background-color :white ;
+}
+
+.main-panel{
+    min-height :100vh ;
+}

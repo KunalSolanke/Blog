@@ -1,0 +1,71 @@
+@import "~tailwindcss/base";
+  
+@import "~tailwindcss/components"; 
+ 
+@import "~tailwindcss/utilities";
+
+@import "scss/variables" ;
+@import "scss/typography" ;
+@import "scss/mixins" ;
+
+
+
+
+@import "scss/inputs" ;
+@import "scss/sidebar" ;
+@import "scss/chartist" ;
+@import "scss/cards" ;
+@import "scss/buttons" ;
+@import "scss/misc" ;
+
+*{
+    padding:0 ;
+    margin:0 ;
+    box-sizing: border-box; 
+}
+.nav-items a{
+    @apply font-mono ;
+    font-size:1.1rem ;
+    font-weight: 200;
+     
+}
+
+.blog_card{
+    position: relative;
+}
+
+.blog_card:hover{
+    
+    transform: scale(1);
+   
+}
+
+.blog_card:hover .blog_icon{
+    background: transparent;
+    background-color: #30292962;
+    
+    z-index : 100 ;
+    transition: all .5s ease-in-out;
+    
+
+}
+
+.blog_card .blog_icon{
+    z-index : -1 ;
+}
+
+
+.dash_body{
+    min-height: 80vh ;;
+}
+
+
+.notification{
+    background-color : rgba(83, 190, 83, 0.767);
+    padding : 10px 20px ;
+    margin-bottom : 20px ;
+}
+
+.ck .ck-content .ck-editor__editable .ck-rounded-corners .ck-editor__editable_inline .ck-blurred{
+    min-height:300px!important ;
+}
